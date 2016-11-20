@@ -1,5 +1,5 @@
 #!/bin/bash
-export GOPATH=`pwd`
+# export GOPATH=`pwd`
 go get github.com/labstack/echo
 go get github.com/auth0/go-jwt-middleware
 go get github.com/gorilla/websocket

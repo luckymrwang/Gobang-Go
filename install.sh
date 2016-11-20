@@ -1,8 +1,8 @@
 #!/bin/bash
-set -e
-export GOPATH=`pwd`
+# set -e
+# export GOPATH=`pwd`
 echo "Getting packages"
 ./getpkg.sh
 echo "Installing"
-go build src/gobang.go
+go build app/gobang.go
 echo "Build success"

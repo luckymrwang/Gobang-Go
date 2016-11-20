@@ -3,7 +3,7 @@ package main
 import (
 	"crypto/sha1"
 	"fmt"
-	"gobang"
+	gobang "gobang/app/server"
 	"html/template"
 	"io"
 	"io/ioutil"
