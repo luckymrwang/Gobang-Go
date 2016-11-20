@@ -2,19 +2,19 @@ package gobang
 
 import (
 	"fmt"
-	"github.com/kataras/go-sessions"
-	"github.com/labstack/echo"
-	"github.com/labstack/echo/engine/standard"
 	"net/http"
 	"strings"
+
+	"github.com/kataras/go-sessions"
+	"github.com/labstack/echo"
 )
 
 func Game(c echo.Context) error {
 	create := false
 	roomId := ""
-	queryString := c.Request().URL().QueryString()
-	w := c.Response().(*standard.Response).ResponseWriter
-	r := c.Request().(*standard.Request).Request
+	queryString := c.QueryString()
+	w := c.Response()
+	r := c.Request()
 	sess := sessions.Start(w, r)
 	if strings.EqualFold(queryString, "closed") {
 		return c.Redirect(http.StatusMovedPermanently, "index.html")
